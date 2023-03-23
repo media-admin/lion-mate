@@ -7,6 +7,7 @@
   width: 100%;
 
   @include atMedium {
+    max-width: 1136px;
     position: relative;
     display: block;
     width: 100%;
@@ -36,6 +37,7 @@
 
   margin-top: 15px;
   margin-right: 1.5rem;
+  margin-left: 2.0rem;
 
   transition: border-radius 0.5s;
 
@@ -49,8 +51,8 @@
   position: relative;
   display: block;
   height: 3px;
-  width: 38px;
-  background: $color-secondary;
+  width: 30px;
+  background: $color-primary;
   transition: 0.5s;
   transform-origin: center;
 }
@@ -114,11 +116,11 @@
   width: 100vw;
   height: calc(100vh - 85px);
   /* top: 60px; */
-  top: 85px;
+  top: 80px;
   left: 0px;
   text-align: left;
-  background-color: rgba($color-tertiary, 0.9);
-  border-top: 3px solid $color-primary;
+  background-color: rgba($color-primary, 0.9);
+  border-top: 6px solid $color-basic-dark;
   padding-top: 0px;
   transition: 0.8s;
   z-index: 1;
@@ -158,8 +160,15 @@
   @include style-text-link-default;
   font-size: 1.8rem;
   line-height: 2.4rem;
-  color: $color-primary;
+  color: $color-tertiary;
   text-decoration: uppercase;
+
+  @include atMedium {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+
 }
 
 /* -- Footer Navigation -- */

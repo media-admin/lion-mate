@@ -9,10 +9,13 @@
   overflow: hidden;
 
   @include atMedium {
+    max-width: calc(1136px + 2rem);
     position: relative;
     min-height: 768px;
     max-height: 768px;
-    top: -115px;
+/*     top: -105px; */
+    margin: 0 auto;
+
     z-index: 0;
     overflow: hidden;
   }
@@ -27,22 +30,45 @@
     object-position: center center;
   }
 
+
+
+
   &__text {
-    position: relative;
-    font-size: 2.8rem;
-    font-family: "Leckerli One", sans-serif;
-    line-height: 3.4rem;
-    color: $color-primary;
-    background-color: $color-tertiary;
-    padding: 0.8rem 2rem;
+    position: absolute;
+    left: 2.5rem;
+    top: 50%;
+    max-width: 60%;
+    width: auto;
+
 
     @include atMedium {
-      position: absolute;
-      font-size: 6.5rem;
-      left: 3.5rem;
-      bottom: 10rem;
+      max-width: 50%;
       width: auto;
-      padding: 2.5rem 3.5rem;
+    }
+  }
+
+
+  &__text h2 {
+    display: inline;
+    font-size: 1.8rem;
+    font-family: "Libre Baskerville", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    line-height: 5.4rem;
+    color: $color-tertiary;
+    background-color: $color-basic-dark;
+    border: 3px solid $color-secondary;
+    padding: 0.8rem 1.5rem;
+
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+
+
+    @include atMedium {
+      font-size: 4.6rem;
+      line-height: 9rem;
+      left: 6.0rem;
     }
   }
 }

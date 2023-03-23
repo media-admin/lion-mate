@@ -3,70 +3,94 @@
   display: none;
 
   @include atMedium {
+    max-width: 1136px;
     position: relative;
-    display: initial;
+    height: 105px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(255,255,255,0.7);
+    margin: 0 auto;
+    padding-right: 1.0rem;
+    padding-left: 1.0rem;
     overflow: hidden;
-    z-index: 100 !important;
   }
 
-  &__contact-information {
-    position: relative;
-    display: flex;
-    height: 60px;
-    margin-right: 0;
-    margin-left: auto;
-    justify-content: space-around;
-    align-items: center;
-    background-color: $color-tertiary;
-    border-bottom: 3px solid $color-primary;
-    padding-left: 150px;
-  }
 
   &__contact-information > div {
     margin-left: 2rem;
   }
 
-  &__contact-information-name {
-    font-weight: 700;
-    color: $color-secondary;
+
+  &__order {
+    position: relative;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
   }
 
-  &__contact-information-address {
+
+
+
+
+  &__order-btn {
+    font-size: 2.0rem;
+    font-family: "Maven Pro", sans-serif;
+    color: $color-basic-dark;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: $color-tertiary;
+    border: 2px solid $color-primary;
+    margin-top: 1.0rem;
+    margin-left: -2.0rem;
   }
 
-  &__contact-information-address-icon {
-    margin-right: 0.5rem;
-    margin-bottom: -4px;
+  &__email {
+    width: 20%;
+    text-align: center;
   }
 
-  &__contact-information-address-info {
-  }
-
-  &__contact-information-phone {
-  }
-
-  &__contact-information-phone-icon {
-    margin-right: 0.5rem;
-    margin-bottom: -2px;
-  }
-
-  &__contact-information-phone-number {
-  }
-
-  &__contact-information-mail {
-    padding-right: 1.5rem;
-  }
-
-  &__contact-information-mail-icon {
-    margin-right: 0.5rem;
-    margin-bottom: -2px;
-  }
-
-  &__contact-information-mail-address {
-  }
-
-  & a {
-    color: $color-secondary;
+  &__email-link {
     @include style-text-link-default;
+    font-size: 2.0rem;
+    font-family: "Maven Pro", sans-serif;
+    line-height: 2.4rem;
+    color: $color-secondary;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: transparent;
   }
+
+
+  &__social-media-container {
+    width: 20%;
+  }
+
+  &__social-media-accounts {
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    list-style-type: none;
+    justify-content: space-evenly;
+    line-height: 2.0rem;
+  }
+
+  &__facebook {}
+  &__facebook-icon {}
+  &__instagram {}
+  &__instagram-icon {}
+  &__linkedin {}
+  &__linkedin-icon {}
+  &__tiktok {}
+  &__tiktok-icon {}
+
+
 }
+
+
+

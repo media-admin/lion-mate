@@ -12,8 +12,7 @@
 /* -- Link Styles -- */
 @mixin style-text-link {
   text-decoration: none;
-  text-transform: uppercase;
-  color: $color-gray;
+  color: $color-secondary;
 }
 
 @mixin style-text-link-default {
