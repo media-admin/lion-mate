@@ -1,0 +1,1854 @@
+/* abstract */
+/* == COLORS == */
+/* == MIXINS == */
+/* -- Clearfix -- */
+/* -- Link Styles -- */
+/* -- Breakpoints -- */
+/* == CONTAINERS == */
+.container-fullwidth {
+  position: relative;
+  display: block;
+  width: calc(100% + 6rem);
+  font-size: 1.4rem;
+  font-family: "Libre Baskerville", serif;
+  line-height: 2.4rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-right: initial;
+  margin-bottom: 1rem;
+  margin-left: -6rem;
+  padding: 5rem 3rem;
+  overflow: hidden; }
+
+.container-fullwidth--red {
+  color: white;
+  background-color: #B6933D;
+  padding: 5rem 3rem; }
+
+.container-fullwidth--green {
+  color: white;
+  background-color: #707070;
+  padding: 5rem 3rem; }
+
+.container-fullwidth__img {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  text-align: center; }
+
+.container-fullwidth__heading {
+  font-size: 1.8rem;
+  font-family: "Libre Baskerville", serif;
+  line-height: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2rem; }
+
+.container-fullwidth__btn {
+  font-size: 1.6rem;
+  font-family: "Libre Baskerville", serif;
+  line-height: 2.6rem;
+  font-weight: 600; }
+
+.intro {
+  padding: 0rem 0.5rem; }
+
+.img-container {
+  position: relative;
+  display: block;
+  min-height: 250px; }
+
+/* base */
+/* == BASIC SETTINGS == */
+/* -- Resets -- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #707070;
+  border-top: 8px solid #829488;
+  background: url("../../images/backgrounds/bg_lion-pattern-green.png"), #DFEEE0;
+  background-size: contain;
+  background-repeat: repeat-y; }
+  @media (min-width: 769px) {
+    body {
+      border-top-width: 12px; } }
+
+main {
+  margin: 0rem;
+  padding: 0rem 1rem; }
+  @media (min-width: 769px) {
+    main {
+      position: relative;
+      /*     top: -115px; */ } }
+
+.site-content {
+  background-color: rgba(255, 255, 255, 0.68);
+  padding: 1rem;
+  margin: 0rem 1rem; }
+  @media (min-width: 769px) {
+    .site-content {
+      max-width: 1136px;
+      position: relative;
+      margin: 0 auto; } }
+
+.inner__container {
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 769px) {
+  .inner__container {
+    padding: 0 4.0rem;
+  }
+}
+
+.site-content__intro-heading {
+  width: calc(100% + 1.0rem);
+  font-family: "Maven Pro", sans-serif;
+  font-size: 2.0rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 3.0rem;
+  border-bottom: 2px solid #B6933D;
+  margin-top: 0;
+  margin-left: -1.0rem;
+  margin-bottom: 1.0rem;
+  padding-left: 1.0rem;
+  padding-bottom: 1.0rem; }
+
+.img--fullwidth {
+  position: absolute;
+  max-width: inherit;
+  width: 100vw;
+  min-height: 200px;
+  height: fit-content;
+  left: 0%;
+  right: 50%;
+  margin: 2rem auto;
+  margin-left: -8vw;
+  margin-right: -50vw;
+  padding: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: center center;
+  overflow: hidden; }
+  @media (min-width: 769px) {
+    .img--fullwidth {
+      position: relative;
+      width: calc(100% + 2rem);
+      margin-left: -1rem;
+      margin-right: initial; } }
+
+/* == TYPOGRAPHY SETTINGS == */
+/* -- Font Imports -- */
+/* libre-baskerville-regular - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-regular.woff2") format("woff2"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-regular.woff") format("woff"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-regular.ttf") format("truetype"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-regular.svg#LibreBaskerville") format("svg");
+  /* Legacy iOS */ }
+
+/* libre-baskerville-italic - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Libre Baskerville";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-italic.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-italic.woff2") format("woff2"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-italic.woff") format("woff"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-italic.ttf") format("truetype"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-italic.svg#LibreBaskerville") format("svg");
+  /* Legacy iOS */ }
+
+/* libre-baskerville-700 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-700.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-700.eot?#iefix") format("embedded-opentype"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-700.woff2") format("woff2"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-700.woff") format("woff"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-700.ttf") format("truetype"), url("../../fonts/libre-baskerville/libre-baskerville-v14-latin_latin-ext-700.svg#LibreBaskerville") format("svg");
+  /* Legacy iOS */ }
+
+/* maven-pro-regular - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-regular.woff2") format("woff2"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-regular.woff") format("woff"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-regular.ttf") format("truetype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-regular.svg#MavenPro") format("svg");
+  /* Legacy iOS */ }
+
+/* maven-pro-500 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-500.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-500.eot?#iefix") format("embedded-opentype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-500.woff2") format("woff2"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-500.woff") format("woff"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-500.ttf") format("truetype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-500.svg#MavenPro") format("svg");
+  /* Legacy iOS */ }
+
+/* maven-pro-600 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-600.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-600.eot?#iefix") format("embedded-opentype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-600.woff2") format("woff2"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-600.woff") format("woff"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-600.ttf") format("truetype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-600.svg#MavenPro") format("svg");
+  /* Legacy iOS */ }
+
+/* maven-pro-700 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-700.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-700.eot?#iefix") format("embedded-opentype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-700.woff2") format("woff2"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-700.woff") format("woff"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-700.ttf") format("truetype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-700.svg#MavenPro") format("svg");
+  /* Legacy iOS */ }
+
+/* maven-pro-800 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-800.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-800.eot?#iefix") format("embedded-opentype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-800.woff2") format("woff2"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-800.woff") format("woff"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-800.ttf") format("truetype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-800.svg#MavenPro") format("svg");
+  /* Legacy iOS */ }
+
+/* maven-pro-900 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Maven Pro";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-900.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-900.eot?#iefix") format("embedded-opentype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-900.woff2") format("woff2"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-900.woff") format("woff"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-900.ttf") format("truetype"), url("../../fonts/maven-pro/maven-pro-v32-latin_latin-ext-900.svg#MavenPro") format("svg");
+  /* Legacy iOS */ }
+
+/* -- Default Classes -- */
+body {
+  font-size: 1.5rem;
+  font-family: "Maven Pro", sans-serif;
+  line-height: 2.6rem;
+  hyphens: auto;
+  hyphenate-limit-chars: auto 3;
+  hyphenate-limit-lines: 4;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-chars: auto 3;
+  -webkit-hyphenate-limit-lines: 4;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: auto 3;
+  -ms-hyphenate-limit-lines: 4; }
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Libre Baskerville", serif;
+  line-height: 3.4rem; }
+
+h2 {
+font-size: 2.4rem;
+font-family: "Libre Baskerville", serif;
+line-height: 3.0rem;
+text-transform: uppercase;
+margin-top: 2.0rem;
+margin-bottom: 1.0rem;
+}
+
+
+
+
+h3 {
+font-size: 2.8rem;
+font-family: "Maven Pro", sans-serif;
+font-weight: 400;
+line-height: 3.3rem;
+text-transform: uppercase;
+margin-top: 2.0rem;
+margin-bottom: 1.0rem;
+}
+
+
+.h3--smaler {
+  font-size: 2.0rem;
+  line-height: 3.0rem;
+  text-transform: initial;
+}
+
+
+h4 {
+  font-size: 2.6rem;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 600;
+  line-height: 3.0rem;
+  text-transform: uppercase;
+  margin-top: 2.0rem;
+  margin-bottom: 1.0rem;
+}
+
+
+h4 {
+  font-size: 2.6rem;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 600;
+  line-height: 3.0rem;
+  text-transform: uppercase;
+  margin-top: 2.0rem;
+  margin-bottom: 1.0rem;
+}
+
+
+.produkte h4 {
+  margin-top: 0.0rem;
+  margin-bottom: 2.0rem;
+}
+
+
+
+p {
+  font-size: 1.4rem;
+  font-family: "Maven Pro", sans-serif;
+  line-height: 2.6rem;
+  margin-bottom: 1.0rem;
+}
+
+strong {
+}
+
+
+a {
+  color: #707070;
+}
+
+.site-main ol {
+  padding-left: 3.0rem;
+}
+
+
+.site-main ul {
+  padding-left: 3.0rem;
+}
+
+
+input[type=checkbox] {
+  accent-color: #B7913C;
+}
+
+input[type=radio] {
+  accent-color: #B7913C;
+}
+
+input[type=range] {
+  accent-color: #B7913C;
+}
+
+progress {
+  accent-color: #B7913C;
+}
+
+
+
+.cite-light {
+  position: relative;
+  width: 90%;
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  line-height: 3.8rem;
+  color: #EDE7E7;
+  padding: 2.0rem;
+}
+
+
+.cite-dark {
+  position: relative;
+  width: 90%;
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  line-height: 3.8rem;
+  color: #707070;
+  padding: 2.0rem;
+}
+
+
+/* == UTILITIES & HELPERS == */
+/* components */
+/* == BUTTONS == */
+
+.underlined {
+  text-decoration: underline;
+}
+
+
+.btn,
+.btn:link,
+.btn:visited {
+  position: relative;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  line-height: 2.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: inherit;
+  border: 1px solid;
+  margin: 1rem 0;
+  margin-top: 3rem;
+  padding: 0.75rem 1.5rem; }
+
+.btn--white,
+.btn--white:link,
+.btn--white:visited {
+  color: white; }
+
+/* layout */
+/* == HEADER TOP */
+.site-header-top {
+  display: none; }
+  @media (min-width: 769px) {
+    .site-header-top {
+      max-width: 1136px;
+      position: relative;
+      height: 105px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      margin: 0 auto;
+      padding-right: 1.0rem;
+      padding-left: 1.0rem;
+      overflow: hidden;
+      z-index: 10; } }
+  .site-header-top__contact-information > div {
+    margin-left: 2rem; }
+  .site-header-top__order {
+    position: relative;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .site-header-top__order-btn {
+    font-size: 2.0rem;
+    font-family: "Maven Pro", sans-serif;
+    color: #829488;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #EDE7E7;
+    border: 2px solid #B6933D;
+    margin-top: 1.0rem;
+    margin-left: -2.0rem;
+    margin-top: auto;
+    padding: 0.75rem 1.5rem;
+   }
+  .site-header-top__email {
+    width: 20%;
+    text-align: center; }
+  .site-header-top__email-link {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2.0rem;
+    font-family: "Maven Pro", sans-serif;
+    line-height: 2.4rem;
+    color: #707070;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: transparent; }
+  .site-header-top__social-media-container {
+    width: 20%; }
+  .site-header-top__social-media-accounts {
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    list-style-type: none;
+    justify-content: space-evenly;
+    line-height: 2.0rem; }
+
+    .img--upper {
+      margin-top: -100px;
+    }
+
+    .img--higher {
+      margin-top: -100px;
+    }
+
+
+/* == HEADER */
+.site-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EDE7E7; }
+  @media (min-width: 769px) {
+    .site-header {
+      max-width: 1136px;
+      width: 100%;
+      height: 65px;
+      color: #EDE7E7;
+      background-color: #B6933D;
+      margin: 0 auto;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      z-index: 100 !important; } }
+  .site-header__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media (min-width: 769px) {
+      .site-header__wrapper {
+        max-width: 1136px;
+        position: relative;
+        margin: 0 auto; } }
+  .site-header a {
+    color: #707070;
+    text-decoration: none;
+    color: #707070; }
+  .site-header__branding {
+    margin-left: 1.5rem; }
+    @media (min-width: 769px) {
+      .site-header__branding {
+        width: initial;
+        margin-left: 0.0rem;
+        z-index: 10; } }
+  .site-header__logo {
+    position: relative;
+    min-width: 110px;
+    max-width: 130px;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 0.5rem; }
+    @media (min-width: 769px) {
+      .site-header__logo {
+        position: relative;
+        min-height: 200px;
+        top: -60px;
+        left: 2rem;
+        background-color: white;
+        padding: 2.0rem 3.0rem 1.5rem 1.5rem;
+        overflow: hidden;
+        z-index: 100;
+        /* min-width: 150px;
+      min-height: 120px; */ } }
+
+  .header-logo__link {
+    width: 100%;
+    height: 100%;
+  }
+
+  .site-header__logo-img {
+    width: 100%;
+    height: auto; }
+    @media (min-width: 769px) {
+      .site-header__logo-img {
+        display: none; } }
+  .site-header__logo-img--desktop {
+    display: none; }
+    @media (min-width: 769px) {
+      .site-header__logo-img--desktop {
+        position: relative;
+        display: block;
+        min-width: 105px;
+        width: auto;
+        height: auto;
+        margin: auto; } }
+  .site-header__nav-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 1rem; }
+    @media (min-width: 769px) {
+      .site-header__nav-container {
+        width: 90%; } }
+  .site-header__cart-button {
+    height: 80%;
+    border-right: 1px solid #707070;
+    padding-right: 2.5rem; }
+    @media (min-width: 769px) {
+      .site-header__cart-button {
+        display: none; } }
+  .site-header__cart-link {
+    height: 100%; }
+
+/* == NAVIGATION == */
+/* -- Main Navigation -- */
+.main-navigation {
+  display: inline-block;
+  width: 100%; }
+  @media (min-width: 769px) {
+    .main-navigation {
+      max-width: 1136px;
+      position: relative;
+      display: block;
+      width: 100%; } }
+
+.site-menu {
+  position: relative;
+  min-height: 72px;
+  height: auto;
+  text-align: right; }
+  @media (min-width: 769px) {
+    .site-menu {
+      display: none; } }
+
+/* -- Burger Menu -- */
+.burger-menu {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  min-height: 30px;
+  height: auto;
+  top: auto;
+  margin-top: 15px;
+  margin-right: 1.5rem;
+  margin-left: 2.0rem;
+  transition: border-radius 0.5s; }
+  @media (min-width: 769px) {
+    .burger-menu {
+      display: none; } }
+
+.line {
+  position: absolute;
+  position: relative;
+  display: block;
+  height: 3px;
+  width: 30px;
+  background: #B6933D;
+  transition: 0.5s;
+  transform-origin: center; }
+
+.line:nth-child(1) {
+  top: 10px;
+  top: 8px; }
+
+.line:nth-child(2) {
+  top: 20px;
+  top: 16px; }
+
+.line:nth-child(3) {
+  top: 30px;
+  top: 24px; }
+
+/* --- Burger Menu Animation  --- */
+.burger-menu.checked .line:nth-child(1) {
+  transform: translateY(10px) rotate(-45deg); }
+
+.burger-menu.checked .line:nth-child(2) {
+  opacity: 0; }
+
+.burger-menu.checked .line:nth-child(3) {
+  transform: translateY(-12px) rotate(45deg); }
+
+.navbar {
+  display: none; }
+  @media (min-width: 769px) {
+    .navbar {
+      display: initial;
+      display: flex;
+      position: relative;
+      display: inline-flex;
+      width: 100%;
+      height: 65px;
+      margin-right: 0;
+      margin-left: auto;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      display: inline-flex;
+      width: 100%;
+      justify-content: normal; } }
+
+.is-active .navbar {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: calc(100vh - 85px);
+  /* top: 60px; */
+  top: 80px;
+  left: 0px;
+  text-align: left;
+  background-color: rgba(182, 147, 61, 0.9);
+  border-top: 6px solid #829488;
+  padding-top: 0px;
+  transition: 0.8s;
+  z-index: 1; }
+
+
+
+
+
+
+.navbar__navigation-list {
+  width: 100%;
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+  height: 65px;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.main-navigation.is-active .navbar__navigation-list {
+  position: relative;
+  display: inline-table;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+@media (min-width: 769px) {
+  .main-navigation.is-active .navbar__navigation-list {
+    display: none;
+  }
+}
+
+
+
+.navbar-item {
+  list-style: none; }
+
+.main-navigation.is-active .navbar-item {
+  position: relative;
+  text-align: center;
+  margin: 3rem auto; }
+
+  @media (min-width: 769px) {
+    .main-navigation.is-active .navbar-item {
+      display: none;
+    }
+  }
+
+
+
+.navbar-item a {
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #EDE7E7;
+  text-decoration: uppercase; }
+  @media (min-width: 769px) {
+    .navbar-item a {
+      font-weight: 600;
+      text-transform: uppercase; } }
+
+/* -- Footer Navigation -- */
+/* == LARGE HERO */
+.large-hero {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  max-height: 350px;
+  height: auto;
+  margin: 0;
+  overflow: hidden; }
+  @media (min-width: 769px) {
+    .large-hero {
+      max-width: 1136px;
+      width: 100%;
+      position: relative;
+      min-height: 478px;
+      max-height: 478px;
+      /*     top: -105px; */
+      margin: 0 auto;
+      z-index: 0;
+      overflow: hidden; } }
+  .large-hero__img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .large-hero__img--desktop {
+    display: none;
+  }
+
+
+
+  @media (min-width: 769px) {
+    .large-hero__img--smartphone {
+      display: none;
+    }
+    .large-hero__img--desktop {
+      display: initial;
+    }
+  }
+
+
+
+
+   @media (min-width: 769px) {
+   .large-hero__text {
+     max-width: 50%;
+     width: auto; } }
+
+
+
+
+  .large-hero__text {
+    position: absolute;
+    left: 2.5rem;
+    top: 50%;
+    max-width: 60%;
+    width: auto; }
+    @media (min-width: 769px) {
+      .large-hero__text {
+        max-width: 50%;
+        width: auto; } }
+  .large-hero__text h1 {
+    display: inline;
+    font-size: 1.8rem;
+    font-family: "Libre Baskerville", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    line-height: 5.4rem;
+    color: #EDE7E7;
+    background-color: #829488;
+    border: 3px solid #707070;
+    padding: 0.8rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    @media (min-width: 769px) {
+      .large-hero__text h1 {
+        font-size: 4.6rem;
+        line-height: 9rem;
+        left: 6.0rem; } }
+  .home .large-hero__text {
+    text-indent: -99999999px;
+  }
+
+/* == CONTACT-NAVBAR == */
+.contact-navbar {
+  position: relative;
+  width: 100%;
+  height: 28px;
+  color: #EDE7E7;
+  background-color: #707070;
+  margin-bottom: 0; }
+  @media (min-width: 769px) {
+    .contact-navbar {
+      display: none; } }
+  .contact-navbar__wrapper {
+    max-width: 1136px;
+    width: calc(100% - 4.0rem);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2.0rem;
+    margin-right: 2.0rem; }
+  .contact-navbar__item {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: "Maven Pro", sans-serif;
+    line-height: 2.0rem;
+    color: #EDE7E7;
+    text-decoration: none; }
+  .contact-navbar__item--mail {
+    width: 50%;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 1.0rem; }
+  .contact-navbar__social-media-accounts {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    list-style-type: none;
+    justify-content: space-evenly;
+    line-height: 2.0rem; }
+
+
+.order-btn a {
+  position: relative;
+  max-width: 80%;
+  font-size: .0rem;
+  line-height: 2.0rem;
+  font-family: "Maven Pro", sans-serif;
+  color: #829488;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #EDE7E7;
+  border: 2px solid #B6933D;
+  margin: 0 auto;
+  margin-top: 1.0rem;
+  margin-top: auto;
+  padding: 0.75rem 1.5rem;
+
+  @media (min-width: 769px) {
+    .order-btn a {
+      font-size: 2.0rem;
+    }
+  }
+      position: relative;
+      max-width: 80%;
+      font-size: 2.0rem;
+      font-family: "Maven Pro", sans-serif;
+      color: #829488;
+      text-decoration: none;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background-color: #EDE7E7;
+      border: 2px solid #B6933D;
+      margin: 0 auto;
+      margin-top: 1.0rem;
+      margin-top: auto;
+      padding: 0.75rem 1.5rem;
+     }
+
+/* == SITE FOOTER == */
+.site-footer {
+  background: #DFEEE0;
+  padding-top: 3.4rem; }
+  @media (min-width: 769px) {
+    .site-footer {
+      position: relative;
+      width: 100%;
+      display: inline-block;
+      padding-top: 1.0rem; } }
+  .site-footer__row {
+    position: relative;
+    width: 100%; }
+    @media (min-width: 769px) {
+      .site-footer__row {
+        max-width: 1136px;
+        position: relative;
+        width: 90%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 1.0rem auto;
+        padding-left: 5%;
+        padding-right: 5%; } }
+  .site-footer a {
+    color: #707070;
+    font-weight: 700;
+    text-decoration: none; }
+  @media (min-width: 769px) {
+    .site-footer-navbar {
+      width: 40%; } }
+  @media (min-width: 769px) {
+    .site-footer__additional-data {
+      width: 30%;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start; } }
+  .site-footer__contact-information {
+    width: 100%;
+    border-top: 6px solid #829488;
+    border-bottom: 6px solid #829488;
+    text-align: center;
+    margin: 2rem auto;
+    padding-top: 1.0rem; }
+    @media (min-width: 769px) {
+      .site-footer__contact-information {
+        width: 50%;
+        display: initial;
+        text-align: initial;
+        list-style: none;
+        border-top: none;
+        border-bottom: none; } }
+  .site-footer__contact-information-details {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin: 1.0rem auto; }
+    @media (min-width: 769px) {
+      .site-footer__contact-information-details {
+        width: initial;
+        justify-content: initial;
+        padding-left: 2rem; } }
+  .site-footer__contact-information-logo {
+    min-width: 140px;
+    max-width: 160px;
+    width: auto; }
+  .site-footer__contact-information-logo-img {
+    width: 100%;
+    margin-left: -1.5rem; }
+  .site-footer__contact-information-address {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+    margin-top: 1.0rem;
+    margin-left: 2.0rem; }
+  .site-footer__contact-information-name {
+    width: 100%;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.0rem;
+    text-transform: uppercase;
+    margin: 1.0rem auto;
+    margin-top: -0.5rem;
+    margin-bottom: 2.5rem; }
+  .site-footer-navbar__navigation-list {
+    text-align: center; }
+    @media (min-width: 769px) {
+      .site-footer-navbar__navigation-list {
+        display: flex;
+        flex: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+        list-style: none; } }
+  .site-footer-navbar__navigation-list-item {
+    line-height: 3.4rem; }
+    @media (min-width: 769px) {
+      .site-footer-navbar__navigation-list-item {
+        width: 35%; } }
+  .site-footer-navbar__navigation-list-item a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #707070;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .site-footer__navigation {
+    padding-top: 4rem; }
+  .site-footer__navigation-list {
+    text-align: center;
+    padding-bottom: 3.4rem; }
+    @media (min-width: 769px) {
+      .site-footer__navigation-list {
+        position: relative;
+        width: 100% !important;
+        text-align: left !important;
+        list-style: none !important; } }
+  .site-footer__navigation-list-item {
+    line-height: 3.4rem; }
+  .site-footer__navigation-list-item a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #707070;
+    font-family: "Maven Pro", sans-serif;
+    text-transform: uppercase; }
+  .site-footer__copyright {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    color: #EDE7E7;
+    background-color: #829488;
+    border-top: 2px solid #B6933D;
+    margin: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem; }
+    @media (min-width: 769px) {
+      .site-footer__copyright {
+        width: 100%; } }
+
+/* pages */
+/* == PAGE HOME */
+.home h1 {
+  text-indent: -9999px;
+  height: 0rem; }
+
+@media (min-width: 769px) {
+  .home .container-half-on-desktop {
+    position: relative;
+    width: calc(50% + 3rem) !important;
+    min-height: 350px;
+    max-height: 350px;
+    height: 100%;
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem; } }
+
+@media (min-width: 769px) {
+  .home .container-half-on-desktop:nth-child(2n) {
+    right: -3rem; } }
+
+@media (min-width: 769px) {
+  .home .container-fullwidth--green {
+    position: relative;
+    min-height: 280px;
+    right: auto;
+    margin-left: 4rem;
+    padding: 5rem 3rem;
+    padding-top: 10rem; } }
+
+@media (min-width: 769px) {
+  .home .container-fullwidth--red {
+    display: flex;
+    flex-direction: row;
+    min-height: 280px;
+    position: relative;
+    left: 4rem;
+    right: 0;
+    padding-top: 10rem; } }
+
+@media (min-width: 769px) {
+  .home .container-fullwidth--red :nth-child(1) {
+    order: 2; } }
+
+@media (min-width: 769px) {
+  .home .container-fullwidth--red :nth-child(2) {
+    order: 1; } }
+
+@media (min-width: 769px) {
+  .home .container-fullwidth--red .highlight__menu-wrapper {
+    position: relative;
+    width: 48%;
+    margin-top: -5rem; } }
+
+@media (min-width: 769px) {
+  .home
+.container-fullwidth--red
+.highlight__menu-wrapper
+.container-fullwidth__img {
+    position: relative;
+    width: 100%; } }
+
+@media (min-width: 769px) {
+  .home .container-fullwidth--red .highlight__menu-description {
+    position: relative;
+    width: 48%; } }
+
+/* vendors */
+
+
+/* == PAGE IMPRESSUM */
+.impressum strong {
+  font-size: 1.4rem;
+  color: #707070;
+}
+
+
+
+
+/* === CONTACT FORMS === */
+.contact-form-section {
+  position: relative;
+  width: 100%;
+  color: #707070;
+  background-color: #ffffff;
+  margin: 0px 0px;
+  padding: 4.5rem 0.25rem;
+  border: 1px solid #707070;
+}
+
+.contact-form-section__container {
+  position: relative;
+  width: 90%;
+  background-color: #ffffff;
+  padding: 4.5rem 0.25rem;
+  font-family: "Libre Baskerville", serif;
+}
+
+.contact-form-section__title {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-section__text {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact-form-section a {
+  color: #001C37;
+  font-weight: 700;
+}
+
+.contact-form-section__form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+}
+
+@media (min-width: 800px) {
+  .contact-form-section__form {
+    padding: 2.5rem;
+    margin: 2.5rem;
+  }
+}
+.contact-form-section__form ::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: "Libre Baskerville", serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: #707070;
+  opacity: 0.7; /* Firefox */
+}
+
+.contact-form-section__form :-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: "Libre Baskerville", serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: #707070;
+  opacity: 0.7; /* Firefox */
+}
+
+.contact-form-section__form ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: "Libre Baskerville", serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: #707070;
+  opacity: 0.7; /* Firefox */
+}
+
+.contact-form-section__form input:focus {
+  outline: none;
+}
+
+
+.contact-form-section__form input {
+  font-family: "Libre Baskerville", serif;
+}
+
+input[type=radio] {
+  margin-right: 0.25em;
+}
+
+.contact-form-section__form > div.column--half {
+  flex: 100%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+  padding: 0.25rem;
+}
+
+@media (min-width: 800px) {
+  .contact-form-section__form > div.column--half {
+    flex: 48%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+    padding: 1rem;
+  }
+}
+@media (min-width: 800px) {
+  .contact-form-section__form > div.column--one-quarter {
+    flex: 23%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .contact-form-section__form > div.column--three-quarters {
+    flex: 73%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+    padding: 1rem;
+  }
+}
+
+
+
+
+
+.contact-form-section__form > div.column--full {
+  flex: 100%;
+  padding: 0.25rem;
+}
+
+@media (min-width: 800px) {
+  .contact-form-section__form > div.column--full {
+    padding: 0rem;
+    padding: 1rem;
+  }
+}
+h2.contact-form-section__form-heading {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 2.8rem !important;
+  font-weight: 400 !important;
+  line-height: 3.2rem !important;
+}
+
+.contact-form-section__form-item {
+  position: relative;
+  width: 100%;
+  color: #707070 !important;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0.5rem;
+  border-bottom: 1px solid #B7913C;
+  margin: 0.5rem auto;
+}
+
+
+.contact-form-section__form label {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.0rem;
+  line-height: 3.0rem;
+  margin-top: 2.5rem;
+  margin-right: 2.0rem;
+}
+
+
+.wpcf7-list-item-label {
+  font-family: "Libre Baskerville", serif;
+  line-height: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.contact-form-section__form-item-property {
+  position: relative;
+  display: block;
+  width: 100%;
+  line-height: 1.4rem;
+  color: #707070 !important;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0.25rem;
+  /* border-bottom: 2px solid $mainBlue; */
+  padding-bottom: 1.5rem;
+  margin: 1.5rem auto;
+}
+
+.contact-form-section__form-item-property .wpcf7-list-item {
+  margin-left: 0rem;
+  margin-right: 2rem;
+}
+
+.contact-form-section__form-item-intrested-in {
+  position: relative;
+  display: block;
+  width: 100%;
+  line-height: 1.4rem;
+  color: #707070 !important;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0.25rem;
+  /* border-bottom: 2px solid $mainBlue; */
+  padding-bottom: 1.5rem;
+  /* margin: 1.5rem auto; */
+}
+
+.contact-form-section__form-item-gender {
+  position: relative;
+  display: block;
+  width: 100%;
+  line-height: 1.4rem;
+  color: #707070 !important;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0.25rem;
+  padding-bottom: 1.5rem;
+  /* margin: 1.5rem auto; */
+}
+
+.contact-form-section__form-item-gender .wpcf7-list-item.first {
+  margin-left: 0rem !important;
+}
+
+.contact-form-section__form-item-intrested-in .wpcf7-list-item {
+  margin-left: 0rem;
+  margin-right: 2rem;
+}
+
+.contact-form-section__form-item-message {
+  min-height: 100px;
+  border: 1px solid #B7913C;
+}
+
+
+.contact-form-section__form .wpcf7-acceptance .wpcf7-list-item .wpcf7-list-item-label {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-left: 0rem !important;
+}
+
+
+.contact-form-section__form-item-dsgvo .wpcf7-acceptance .wpcf7-list-item {
+  margin-left: 0rem !important;
+}
+
+.contact-form-section__form-label-dsgvo-acceptance {
+  padding-left: -10px;
+  margin-left: 0rem !important;
+}
+
+.contact-form-section__form-item-agb .wpcf7-list-item {
+  margin-left: 0rem !important;
+}
+
+
+
+.contact-form-section__form-item-dsgvo-checkbox {
+  line-height: 1.4rem;
+}
+
+.contact-form-section input[type=checkbox] {
+  position: relative;
+  left: 0.5rem;
+  top: -2px;
+  vertical-align: baseline;
+  line-height: 1.4rem;
+  margin-top: -2px !important;
+  z-index: 0;
+  -webkit-appearance: none;
+}
+
+.contact-form-section input[type=checkbox]::before {
+  width: 12px;
+  height: 12px;
+  border-radius: 0;
+  border: 2px solid #001C37 !important;
+  background-color: transparent !important;
+  display: block;
+  content: "";
+  float: left !important;
+  margin-right: 15px !important;
+  left: -0.25rem !important;
+  z-index: 5 !important;
+  position: relative;
+}
+
+.contact-form-section input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 4px !important;
+  height: 10px !important;
+  border: solid #001C37 !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0px !important;
+  left: -1px !important;
+  margin-left: 2px !important;
+}
+
+.contact-form-section__form-label-topic {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.contact-form-section select {
+  position: relative;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: transparent !important;
+  border: 2px solid #ffffff !important;
+  padding: 0.25rem 0.5rem;
+}
+
+.contact-form-section select:focus-visible {
+  font-weight: 300 !important;
+  color: #001C37;
+  background-color: #ffffff !important;
+  border: 2px solid #001C37 !important;
+  outline-style: none;
+}
+
+.contact-form-section__form-item-dsgvo-acceptance {
+  position: absolute;
+  display: inline-block;
+  width: 92%;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  opacity: 1; /* Firefox */
+  margin-top: -0.25rem;
+  padding-left: 0.75rem;
+}
+
+.wpcf7-form-control .wpcf7-acceptance {
+  line-height: 1.6rem;
+  padding-left: 0.25rem;
+}
+
+.contact-form-section__form-item-dsgvo-acceptance a {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  opacity: 1; /* Firefox */
+  text-decoration: none;
+}
+
+.contact-form-section__btn {
+  position: relative !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #EDE7E7 !important;
+  text-decoration: none !important;
+  background-color: #B7913C;
+  margin-top: 2.5rem !important;
+  padding: 0.5rem 1.5rem !important;
+}
+
+@media (min-width: 800px) {
+  .contact-form-section__btn {
+    margin-top: 3.5rem !important;
+    padding: 1rem 1.5rem !important;
+  }
+}
+
+
+.contact-form-section__form-label-quantity {
+
+
+}
+
+
+.contact-form-section__form-item-unit {
+  font-family: "Libre Baskerville", serif;
+}
+
+
+.contact-form-section__form-label-price input {
+  text-align: left !important;
+  background-color: #EDE7E7;
+  margin-left: 0.5rem !important;
+}
+
+
+.contact-form-section__form-notice-price {
+  margin-top: 0px;
+  line-height: 1.0rem;
+  padding-top: 0.5rem;
+}
+
+
+.contact-form-section__form-notice-shipping {
+
+}
+
+
+.contact-form-section__form-item-ordermessage {
+  min-height: 100px;
+  border: 1px solid #B7913C;
+}
+
+
+.contact-form-section__form-item-product > .first {
+    min-width: 250px;
+    width: 30%;
+    min-height: 270px;
+    height: auto;
+}
+
+.contact-form-section__form-item-product > .first:before {
+    background-image: url('../../images/products/Basic_mint_dunkel_DSC2980_web.jpg');
+    content: '';
+    width: 100%;
+    min-height: 270px;
+    height: auto;
+    display: inline-block;
+    background-size: cover;
+    margin-bottom: 15px;
+    object-fit: cover;
+    object-position: center center;
+    overflow: hidden;
+}
+
+
+.contact-form-section__form-item-product > .wpcf7-list-item:nth-child(2) {
+    min-width: 250px;
+    min-height: 270px;
+    width: 30%;
+    height: auto;
+}
+
+.contact-form-section__form-item-product > .wpcf7-list-item:nth-child(2):before {
+    background-image: url('../../images/products/Recovery_dunkelorange_DSC2908_web.jpg');
+    content: '';
+    width: 100%;
+    min-height: 270px;
+    height: auto;
+    display: inline-block;
+    background-size: cover;
+    margin-bottom: 15px;
+    object-fit: cover;
+    object-position: center center;
+    overflow: hidden;
+}
+
+
+.contact-form-section__form-item-product > .last {
+    min-width: 250px;
+    min-height: 270px;
+    width: 30%;
+    height: auto;
+}
+
+.contact-form-section__form-item-product > .last:before {
+    background-image: url('../../images/products/RECOVERY-und-BASIC_web.jpg');
+    content: '';
+    width: 100%;
+    min-height: 270px;
+    height: auto;
+    display: inline-block;
+    background-size: cover;
+    margin-bottom: 15px;
+    object-fit: cover;
+    object-position: center center;
+    overflow: hidden;
+}
+
+.wp-container-26 {
+  justify-content: center;
+}
+
+
+.shoutout {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+
+.preparation__container {
+  padding: 1.0rem;
+}
+
+.preparation__container h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #EDE7E7;
+  background-image: url('../../images/backgrounds/bg_brush-gold.svg');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 3rem 0;
+  margin-right: -2rem;
+  margin-left: -2rem;
+}
+
+
+.bg-green {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.bg--wild {
+  margin-top: -8rem;
+  margin-bottom: -6rem;
+}
+
+
+.wp-block-columns.has-background {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+
+.wp-container-34 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  justify-content: center !important;
+}
+
+body .is-layout-flex {
+  justify-content: center !important;
+}
+
+
+.fullwidth-img img {
+  max-width: calc(100% + 2rem);
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  overflow: hidden;
+}
+
+
+.faq__container {
+  margin: 2.0rem;
+}
+
+
+/* === ACCORDION === */
+
+* {
+  box-sizing: border-box;
+
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+
+.accordion {
+  position: relative;
+}
+
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #707070;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] {
+  /* border-bottom: 1px solid $mainRed; */
+  padding-bottom: 0.25rem;
+}
+
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em;
+  font-family: "Maven Pro", sans-serif;
+  color: #EDE7E7;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  border: none;
+  background: #829488;
+  outline: none;
+  border-radius: 0px;
+  margin-bottom: 0.0rem;
+  padding-right: 1.0rem;
+  padding-bottom: 2.0rem !important;
+}
+
+
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+}
+
+
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #EDE7E7;
+  background-color: transparent !important;
+}
+
+
+.accordion button .accordion-title {
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 1em 1.5em 1em 0;
+  padding-bottom: 1.0rem;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  right: 18px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+
+.accordion button[aria-expanded='true'] {
+}
+
+
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+
+
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+
+.accordion .accordion-content p {
+  font-family: "Maven Pro", san;
+  font-size: 2.0rem;
+  font-weight: 400;
+  margin: 1.5em;
+  margin-top: 0.25em;
+}

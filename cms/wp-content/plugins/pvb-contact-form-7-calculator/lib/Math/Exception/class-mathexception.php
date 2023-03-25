@@ -1,0 +1,13 @@
+<?php
+
+
+namespace PVBCF7Calculator\lib\Math\Exception;
+
+/**
+ * Base class for all math exceptions.
+ *
+ * This class is abstract to ensure that only fine-grained exceptions are thrown throughout the code.
+ */
+abstract class MathException extends \RuntimeException {
+
+}
